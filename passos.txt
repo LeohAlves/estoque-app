@@ -4,6 +4,7 @@
   ionic generate service pasta/nome
 
 3° Importar o HttpClientModule no app.module.ts (app.component.ts)
+3.1 se for standalone importar o provideHttpClient no main ts nos providers
 
 4° Injetar o HttpClient no construtor do serviço (todos)
 
@@ -13,7 +14,7 @@
 
 7º Criar os demais metodos necessarios no serviço (todos)
 
-8º Criar a clase ou interface para os dados a serem trabalhados.
+8º Criar a classe ou interface para os dados a serem trabalhados.
 
 9º Injetar o serviço na Pagina que deseja consumir a API
 
