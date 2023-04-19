@@ -24,4 +24,5 @@
 
 
 Anotaçoes
-  todo vez que tiver dados tem um serviço
+Toda vez que tiver dados tem um serviço
+ionic generate page nome - criar uma página nova
