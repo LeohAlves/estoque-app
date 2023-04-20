@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { Produto } from '../models/Produto.model';
+import { ProdutoService } from '../services/produto.service';
 
 @Component({
   selector: 'app-produto',
@@ -10,11 +12,17 @@ import { IonicModule } from '@ionic/angular';
   standalone: true,
   imports: [IonicModule, CommonModule, FormsModule]
 })
-export class ProdutoPage implements OnInit {
+export class ProdutoPage {
+  listaProdutos: Produto[] = [];
 
-  constructor() { }
+  constructor(private produtoServices: ProdutoService) {
+    this.buscarProdutos();
+   }
 
-  ngOnInit() {
+  buscarProdutos() {
+    this.produtoServices.getAll().subscribe(dados => {
+      this.listaProdutos = dados as Produto[];
+    });
   }
 
 }
