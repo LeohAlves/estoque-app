@@ -32,7 +32,7 @@ export class CreateClientePage implements OnInit {
         senha: this.senha
       }
       this.clientesService.create(cliente).subscribe(dados =>{
-        alert('Cliente Inserido com sucesso: ' + dados.id)
+        alert('Cliente inserido com sucesso: ' + dados.id)
         //navegaçao aqui
         this.route.navigateByUrl('/home');
         // this.route.navigate(['/home']);

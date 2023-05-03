@@ -32,7 +32,7 @@ export class CreateProdutoPage implements OnInit {
         nome_imagem: this.nome_imagem,
       };
       this.produtoService.create(produto).subscribe((dados) => {
-        alert('proditp Inserido com sucesso: ' + dados.id);
+        alert('Produto inserido com sucesso: ' + dados.id);
         //navegaçao aqui
         this.route.navigateByUrl('/produto');
         // this.route.navigate(['/home']);
@@ -40,7 +40,7 @@ export class CreateProdutoPage implements OnInit {
 
       //Nunca colocar a navegaçao fora.. vai voltar sem saber a resposta
     } else {
-      alert('nescessario preço não conferem');
+      alert('Há informações vazias');
     }
   }
 }

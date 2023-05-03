@@ -7,16 +7,16 @@
 <ion-content [fullscreen]="true" class="ion-padding">
   <ion-list>
     <ion-item>
-      <ion-input [(ngModel)]="titulo" label="Titulo" labelPlacement="floating" placeholder="Digite o  Titulo"></ion-input>
+      <ion-input [(ngModel)]="titulo" label="Título" labelPlacement="floating" placeholder="Digite o título"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input [(ngModel)]="descricao" label="Descrição" labelPlacement="floating" placeholder="Digite a descrição"></ion-input>
+      <ion-input [(ngModel)]="descricao" label="Descrição" labelPlacement="floating" placeholder="Digite a descrição do produto"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input [(ngModel)]="preco" label="Preço" labelPlacement="floating"  type="number"  placeholder="Digite o preco"></ion-input>
+      <ion-input [(ngModel)]="preco" label="Preço" labelPlacement="floating"  type="number"  placeholder="Digite o preço"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input [(ngModel)]="nome_imagem" label="Url da imagem" labelPlacement="floating"  placeholder="digite o caminho da imagem"></ion-input>
+      <ion-input [(ngModel)]="nome_imagem" label="Url da imagem" labelPlacement="floating"  placeholder="Digite o caminho da imagem"></ion-input>
     </ion-item>
     <ion-button expand="block" (click)="salvar()" fill="outline">Cadastrar</ion-button>
   </ion-list>
