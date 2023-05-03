@@ -25,4 +25,4 @@
 
 Anotaçoes
 Toda vez que tiver dados tem um serviço
-ionic generate page create-cliente - criar uma página nova
+ionic generate page create-produto - criar uma página nova

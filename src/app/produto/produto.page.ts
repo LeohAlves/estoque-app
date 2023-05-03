@@ -4,13 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { Produto } from '../models/Produto.model';
 import { ProdutoService } from '../services/produto.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-produto',
   templateUrl: './produto.page.html',
   styleUrls: ['./produto.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+  imports: [IonicModule, CommonModule, FormsModule, RouterLink]
 })
 export class ProdutoPage {
   listaProdutos: Produto[] = [];
