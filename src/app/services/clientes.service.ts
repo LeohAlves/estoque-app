@@ -28,17 +28,26 @@ export class ClientesService {
     );
   }
 
-  getOne(id: number) {
+  getOne(id: number): Observable<Cliente>{
     //     this.http.get(this.url + '/' + id)
-    return this.http.get(`${this.url}/${id}`);
+    return this.http.get<Cliente>(`${this.url}/${id}`).pipe(
+      map(retorno => retorno),
+      catchError(erro => this.exibirErro(erro))
+    );
   }
 
-  update(cliente: Cliente) {
-    return this.http.put(`${this.url}/${cliente.id}`, cliente);
+  update(cliente: Cliente): Observable<Cliente> {
+    return this.http.put<Cliente>(`${this.url}/${cliente.id}`, cliente).pipe(
+      map(retorno => retorno),
+      catchError(erro => this.exibirErro(erro))
+    );
   }
 
-  delete(id: number) {
-    return this.http.delete(`${this.url}/${id}`);
+  delete(id: number) : Observable<Cliente>{
+    return this.http.delete<Cliente>(`${this.url}/${id}`).pipe(
+      map(retorno => retorno),
+      catchError(erro => this.exibirErro(erro))
+      );
   }
 
   login() {}

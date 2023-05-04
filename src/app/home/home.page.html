@@ -8,10 +8,20 @@
 
 <ion-content [fullscreen]="true">
   <ion-item *ngFor="let cliente of listaClientes">
+
     <ion-label>
       <h1>{{cliente.nome}}</h1> <br>
       <p>{{cliente.email}}</p>
     </ion-label>
+
+    <ion-button (click)="alterarCliente(cliente.id!)" color="warning">
+      <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+    </ion-button>
+
+    <ion-button (click)="excluirCliente(cliente.id!)" color="danger">
+      <ion-icon slot="icon-only" name="trash"></ion-icon>
+    </ion-button>
+
   </ion-item>
 
   <ion-button routerLink="/create-cliente">

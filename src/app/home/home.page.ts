@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { Cliente } from '../models/Cliente.model';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +15,7 @@ import { RouterLink } from '@angular/router';
 export class HomePage {
   listaClientes: Cliente[] = [];
 
-  constructor(private clientesService: ClientesService) {
+  constructor(private clientesService: ClientesService, private router: Router) {
     this.buscarClientes();
   }
 
@@ -23,5 +23,12 @@ export class HomePage {
     this.clientesService.getAll().subscribe(dados => {
       this.listaClientes = dados;
     });
+  }
+
+  alterarCliente(id: number){
+    this.router.navigateByUrl(`/alterar-cliente/${id}`)
+  }
+
+  excluirCliente(id: number){
   }
 }
