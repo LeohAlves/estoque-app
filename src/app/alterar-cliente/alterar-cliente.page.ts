@@ -34,6 +34,25 @@ export class AlterarClientePage implements OnInit {
   }
 
   salvar(){
+    if (this.senha === this.confirmaSenha && this.senha != '')
+    {console.log(this.nome)
+      const cliente: Cliente = {
+        id: this.id,
+        nome: this.nome,
+        email: this.email,
+        senha: this.senha
+      }
+      this.clientesService.update(cliente).subscribe(dados =>{
+        alert('Cliente atualizado com sucesso: ' + dados.id)
+        //navegaçao aqui
+        this.router.navigateByUrl('/home');
+        // this.route.navigate(['/home']);
+      });
+
+      //Nunca colocar a navegaçao fora.. vai voltar sem saber a resposta
+    }else {
+      alert('Senhas não conferem')
+    }
   }
 
   

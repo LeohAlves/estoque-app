@@ -15,7 +15,9 @@ import { Router, RouterLink } from '@angular/router';
 export class HomePage {
   listaClientes: Cliente[] = [];
 
-  constructor(private clientesService: ClientesService, private router: Router) {
+  constructor(private clientesService: ClientesService, private router: Router) {}
+
+  ionViewWillEnter(){
     this.buscarClientes();
   }
 
