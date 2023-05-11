@@ -10,13 +10,13 @@
       <ion-input [(ngModel)]="titulo" label="Nome" labelPlacement="floating" placeholder="Digite o nome"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input [(ngModel)]="descricao" label="descricao" labelPlacement="floating"  placeholder="Digite o e-mail"></ion-input>
+      <ion-input [(ngModel)]="descricao" label="descricao" labelPlacement="floating"  placeholder="Digite a descrição"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input [(ngModel)]="preco" label="preço" labelPlacement="floating"  type="number"  placeholder="Digite sua senha"></ion-input>
+      <ion-input [(ngModel)]="preco" label="preço" labelPlacement="floating"  type="number"  placeholder="Digite seu preco"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input [(ngModel)]="nome_imagem" label="nome_imagem" labelPlacement="floating" minlength="4" type="password"  placeholder="Confirme a sua senha"></ion-input>
+      <ion-input [(ngModel)]="nome_imagem" label="imagem" labelPlacement="floating" minlength="4"   placeholder="caminho imagem"></ion-input>
     </ion-item>
     <ion-button expand="block" (click)="salvar()" fill="outline">SALVAR</ion-button>
   </ion-list>

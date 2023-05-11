@@ -19,7 +19,7 @@ export class ProdutoService {
       catchError(erro => this.exibirErro(erro))
     );
   }
-  
+
   getAll(): Observable<Produto[]> {
     return this.http.get<Produto[]>(this.url).pipe(
       map(retorno => retorno),
@@ -27,13 +27,13 @@ export class ProdutoService {
       );
   }
 
-  getOne(id: number):Observable<Produto> {
-    //     this.http.get(this.url + '/' + id)
-    return this.http.get<Produto>(`${this.url}/${id}`).pipe(
-      map(retorno => retorno),
-      catchError(erro => this.exibirErro(erro))
-    );
-  }
+  getOne (id: number): Observable<Produto>{
+    // return this.http.get(this.url + '/' + id);
+     return this.http.get<Produto>(`${this.url}/${id}`).pipe(
+       map(retorno => retorno),
+       catchError(erro => this.exibirErro(erro))
+     );
+   }
 
   update(produto: Produto):Observable<Produto> {
     return this.http.put<Produto>(`${this.url}/${produto.id}`, produto).pipe(

@@ -5,4 +5,3 @@ export class Produto {
     preco: number | undefined;
     nome_imagem: string | undefined;
   }
-  
