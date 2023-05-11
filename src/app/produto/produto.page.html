@@ -7,15 +7,26 @@
 <ion-content [fullscreen]="true">
   <ion-item *ngFor="let produto of listaProdutos">
     <ion-label>
-      <h1>{{produto.titulo}}</h1> <br>
+      <h1>Nome: {{produto.titulo}}</h1> <br>
       <h2>Descrição: {{produto.descricao}}</h2>
       <p>Preço: R${{produto.preco}}</p>
     </ion-label>
+
+    <ion-button (click)="alterarProduto(produto.id!)" color="warning">
+      <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+    </ion-button>
+
+    <ion-button (click)="excluirProduto(produto.id!)" color="danger">
+      <ion-icon slot="icon-only" name="trash"></ion-icon>
+    </ion-button>
   </ion-item>
+
   <ion-button routerLink="/create-produto">
     Adicionar produto
   </ion-button>
+
   <ion-button routerLink="/home">
     Voltar ao início
   </ion-button>
+
 </ion-content>

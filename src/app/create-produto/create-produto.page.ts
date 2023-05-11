@@ -14,6 +14,7 @@ import { ProdutoService } from '../services/produto.service';
   imports: [IonicModule, CommonModule, FormsModule],
 })
 export class CreateProdutoPage implements OnInit {
+  id = 0;
   titulo = '';
   descricao = '';
   preco: number | undefined;
