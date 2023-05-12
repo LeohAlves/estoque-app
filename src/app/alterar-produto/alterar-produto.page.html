@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>alterar-produto</ion-title>
+    <ion-title>Alterar produto</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -10,13 +10,13 @@
       <ion-input [(ngModel)]="titulo" label="Nome" labelPlacement="floating" placeholder="Digite o nome"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input [(ngModel)]="descricao" label="descricao" labelPlacement="floating"  placeholder="Digite a descrição"></ion-input>
+      <ion-input [(ngModel)]="descricao" label="Descrição" labelPlacement="floating"  placeholder="Digite a descrição"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input [(ngModel)]="preco" label="preço" labelPlacement="floating"  type="number"  placeholder="Digite seu preco"></ion-input>
+      <ion-input [(ngModel)]="preco" label="Preço" labelPlacement="floating" type="number"  placeholder="Digite o preço"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input [(ngModel)]="nome_imagem" label="imagem" labelPlacement="floating" minlength="4"   placeholder="caminho imagem"></ion-input>
+      <ion-input [(ngModel)]="nome_imagem" label="Imagem" labelPlacement="floating" placeholder="Digite o caminho da imagem"></ion-input>
     </ion-item>
     <ion-button expand="block" (click)="salvar()" fill="outline">SALVAR</ion-button>
   </ion-list>
